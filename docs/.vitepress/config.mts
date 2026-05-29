@@ -20,6 +20,7 @@ export default defineConfig({
           { text: 'Introduction', link: '/guide/introduction' },
           { text: 'Getting Started', link: '/guide/getting-started' },
           { text: 'Codex Guide', link: '/guide/codex-guide' },
+          { text: 'Claude Code Guide', link: '/guide/claude-code-guide' },
           { text: 'Markdown Examples', link: '/guide/markdown-examples' }
         ]
       }
