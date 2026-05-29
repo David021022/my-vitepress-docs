@@ -23,11 +23,11 @@ features:
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
  -->
-# Welcome to My VitePress Docs
+# 欢迎来到我的 VitePress 文档站
 
-This is a documentation site built with VitePress.
+这是一个使用 VitePress 构建的文档站点。
 
-## Quick Links
-- [Introduction](/guide/introduction)
-- [Getting Started](/guide/getting-started)
+## 快速链接
+- [简介](/guide/introduction)
+- [快速开始](/guide/getting-started)
 - [GitHub](https://github.com/David021022)
