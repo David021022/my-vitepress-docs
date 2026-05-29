@@ -1,4 +1,29 @@
 ﻿import { defineConfig } from 'vitepress'
+import { readdirSync } from 'node:fs'
+import { join } from 'node:path'
+
+function toTitle(fileName: string): string {
+  const stem = fileName.replace(/\.md$/, '')
+  return stem
+    .split('-')
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ')
+}
+
+function getGuideItems() {
+  const guideDir = join(process.cwd(), 'docs', 'guide')
+
+  return readdirSync(guideDir)
+    .filter((file) => file.endsWith('.md'))
+    .sort()
+    .map((file) => {
+      const stem = file.replace(/\.md$/, '')
+      return {
+        text: toTitle(file),
+        link: `/guide/${stem}`
+      }
+    })
+}
 
 export default defineConfig({
   // GitHub Pages project site base path
@@ -16,13 +41,7 @@ export default defineConfig({
     sidebar: [
       {
         text: 'Guide',
-        items: [
-          { text: 'Introduction', link: '/guide/introduction' },
-          { text: 'Getting Started', link: '/guide/getting-started' },
-          { text: 'Codex Guide', link: '/guide/codex-guide' },
-          { text: 'Claude Code Guide', link: '/guide/claude-code-guide' },
-          { text: 'Markdown Examples', link: '/guide/markdown-examples' }
-        ]
+        items: getGuideItems()
       }
     ],
 

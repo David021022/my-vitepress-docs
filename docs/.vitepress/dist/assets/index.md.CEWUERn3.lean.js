@@ -1,1 +1,0 @@
-import{_ as t,H as a,f as r,i}from"./chunks/framework.CzroR0Ng.js";const p=JSON.parse('{"title":"欢迎来到我的 VitePress 文档站","description":"","frontmatter":{},"headers":[],"relativePath":"index.md","filePath":"index.md"}'),s={name:"index.md"};function n(o,e,l,d,_,c){return a(),r("div",null,[...e[0]||(e[0]=[i("",4)])])}const m=t(s,[["render",n]]);export{p as __pageData,m as default};
